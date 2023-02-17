@@ -2,17 +2,20 @@ import fs from 'fs'
 import { HTTPReturn } from '@/adapters/serverHTTP/types'
 import { statusHTTP } from '@/adapters/serverHTTP'
 
-type PaymentRequest = {
-  body: {
-    path: string
+type DownloadRequest = {
+  params: {
+    userId: string
+  },
+  query: {
+    fileName: string
   }
 }
 
 export const downloadCaseUse = async (
   settings: unknown,
 ): Promise<HTTPReturn> => {
-  const response = settings as PaymentRequest
-  const path = `./uploads/${response.body.path}`
+  const request = settings as DownloadRequest
+  const path = `./uploads/users/${request.params.userId}/${request.query.fileName}`
   const buffer = fs.readFileSync(path)
 
   return {
