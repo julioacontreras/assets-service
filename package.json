@@ -10,8 +10,8 @@
     "lint": "eslint --ignore-path .gitignore ./src --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test:unit": "jest",
-    "doc": "apidoc -i src -o documentation",
-    "doc:view": "npx http-server ./documentation"
+    "doc:build": "apidoc -i src -o documentation",
+    "doc": "npx http-server ./documentation"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/fastify-multipart": "^0.7.0",
-    "@types/jest": "^27.5.0",
+    "@types/jest": "^27.5.2",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/node": "^17.0.45",
     "@types/webpack-node-externals": "^2.5.3",

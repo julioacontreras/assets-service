@@ -27,6 +27,18 @@ const prepareDestinyPath = async (userId: string): Promise<string> => {
   return `./uploads/${userId}/`
 }
 
+/**
+ * @api {post} /api/media/:area/:file Upload file
+ * @apiName Upload
+ * @apiGroup Media 
+ *
+ * @apiParam {String} area Area when will the file to upload 
+ * 
+ * @apiForm {String} file File name with extension to download
+ *
+ * @apiSuccess {String} area Area the file to uploaded
+ * @apiSuccess {String} fileName File name uploaded
+ */
 export const uploadCaseUse = async (request: unknown): Promise<HTTPReturn> => {
   const response = request as PaymentRequest
   const area = response.params.area as string

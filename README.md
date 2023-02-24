@@ -9,7 +9,6 @@ https://developer.paypal.com/braintree/docs/start/hello-server
 
 
 ```console
-    npm install -g win-node-env 
     npm install -g nodemon
     npm install
 
@@ -28,10 +27,10 @@ https://developer.paypal.com/braintree/docs/start/hello-server
     npm install apidoc http-server -g
 
     # generate api documentation
-    npm run doc
+    npm run doc:build
 
     # view documentation
-    npm run doc:view
+    npm run doc
 ```
 
 ## Tests
