@@ -13,7 +13,7 @@ type PaymentRequest = {
     fileName: string
   },
   params: {
-    userId: string
+    area: string
   },
   file: any
 }
@@ -24,14 +24,14 @@ const generateFilename = async (origin: string): Promise<string> => {
 }
 
 const prepareDestinyPath = async (userId: string): Promise<string> => { 
-  return `./uploads/users/${userId}/`
+  return `./uploads/${userId}/`
 }
 
 export const uploadCaseUse = async (request: unknown): Promise<HTTPReturn> => {
   const response = request as PaymentRequest
-  const userId = response.params.userId as string
+  const area = response.params.area as string
   const fileName = await generateFilename(response.body.fileName) 
-  const pathName = await prepareDestinyPath(userId) 
+  const pathName = await prepareDestinyPath(area) 
 
   if (!existsSync(pathName)) {
     mkdirSync(pathName, { recursive: true })
@@ -46,7 +46,7 @@ export const uploadCaseUse = async (request: unknown): Promise<HTTPReturn> => {
   return {
     response: {
       fileName,
-      userId 
+      area 
     },
     code: statusHTTP.OK,
   }

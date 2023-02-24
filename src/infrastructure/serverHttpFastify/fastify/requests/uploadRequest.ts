@@ -19,8 +19,9 @@ export function useUploadHandler (useCaseExecute: UseCaseFunction, name: string)
             file: request.file.buffer,
           })
           return reply.status(returnHTTP.code).send(returnHTTP.response)
-        } catch (err) {
-          return reply.status(500).send({ status: 'internal-error' })
+        } catch (err: any) {
+          const message = process.env.NODE_ENV === 'development' ? { message: err.messge} : {}
+          return reply.status(500).send({ status: 'internal-error', ...message })
         }
       }
       return uploadRoute

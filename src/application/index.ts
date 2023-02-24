@@ -7,13 +7,13 @@ import { downloadCaseUse } from '@/application/useCases/download'
 function useRoutes() {
   serverHTTP.add('upload', {
     useCase: uploadCaseUse,
-    route: '/api/media/user/:userId',
+    route: '/api/media/:area',
     method: 'upload',
   })
 
   serverHTTP.add('download', {
     useCase: downloadCaseUse,
-    route: '/api/media/user/:userId',
+    route: '/api/media/:area/:file',
     method: 'download',
   })
 }

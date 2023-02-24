@@ -4,10 +4,8 @@ import { statusHTTP } from '@/adapters/serverHTTP'
 
 type DownloadRequest = {
   params: {
-    userId: string
-  },
-  query: {
-    fileName: string
+    area: string,
+    file: string
   }
 }
 
@@ -15,7 +13,7 @@ export const downloadCaseUse = async (
   settings: unknown,
 ): Promise<HTTPReturn> => {
   const request = settings as DownloadRequest
-  const path = `./uploads/users/${request.params.userId}/${request.query.fileName}`
+  const path = `./uploads/${request.params.area}/${request.params.file}`
   const buffer = fs.readFileSync(path)
 
   return {
