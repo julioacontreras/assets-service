@@ -1,12 +1,12 @@
 import { createWriteStream, existsSync, mkdirSync } from 'fs'
-import path from 'path'
 import util from 'util'
 import pipe from 'ts-stream'
-// import crypto from 'crypto'
 
 import { HTTPReturn } from '@/adapters/serverHTTP/types'
 import { statusHTTP } from '@/adapters/serverHTTP'
 import { ERROR_UPOADING_FILE } from '@/domain/constants'
+
+import { getSchemaRequest, prepareErrorParamsRequest } from '@/domain/shared/validateRequest'
 
 const pump = util.promisify(pipe)
 
@@ -22,13 +22,6 @@ export type MediaResponse = {
   area: string
   file: string
 }
-
-/*
-const generateFilename = async (origin: string): Promise<string> => {
-  const buffer = await crypto.randomBytes(24)  
-  return `${buffer.toString('hex')}${path.extname(origin)}`
-}
-*/
 
 export const uploadThis = (pathName: string, fileName: string, file: any) => {
   const stream = createWriteStream(`${pathName}${fileName}`)
@@ -55,6 +48,15 @@ const prepareDestinyPath = (area: string): string => {
  * @apiSuccess {String} fileName File name uploaded
  */
 export const uploadCaseUse = (request: MediaRequest): HTTPReturn => {
+  const schema = getSchemaRequest()
+  const { error } = schema.validate(request.params)
+  if (error){
+    return {
+      response: prepareErrorParamsRequest(error),
+      code: statusHTTP.INTERNAL_SERVER_ERROR,
+    }
+  }
+
   const area = request.params.area as string
   const fileName = request.params.file
   const pathName = prepareDestinyPath(area) 

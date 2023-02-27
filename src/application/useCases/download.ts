@@ -2,6 +2,7 @@ import fs from 'fs'
 import { HTTPReturn } from '@/adapters/serverHTTP/types'
 import { statusHTTP } from '@/adapters/serverHTTP'
 import { ERROR_INVALID_FILE_PATH_NAME } from '@/domain/constants'
+import { getSchemaRequest, prepareErrorParamsRequest } from '@/domain/shared/validateRequest'
 
 export type DownloadRequest = {
   params: {
@@ -21,6 +22,15 @@ export type DownloadRequest = {
  * @apiSuccess {File} file Return file data
  */
 export const downloadCaseUse = (request: DownloadRequest): HTTPReturn => {
+  const schema = getSchemaRequest()
+  const { error } = schema.validate(request.params)
+  if (error){
+    return {
+      response: prepareErrorParamsRequest(error),
+      code: statusHTTP.INTERNAL_SERVER_ERROR,
+    }
+  }
+
   const filenamepath = `./uploads/${request.params.area}/${request.params.file}`
   try {
     const buffer = fs.readFileSync(filenamepath)
