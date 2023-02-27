@@ -1,6 +1,14 @@
 export type UseCaseName = string
 
+export type AppError = {
+  error: {
+    code: string,
+    message: string
+  }
+}
+
 export type HTTPResponse = unknown
+
 
 export type HTTPReturn = {
   response: HTTPResponse
@@ -20,7 +28,7 @@ export type HTTPRequest = {
  *
  */
 export type UseCaseFunction = (
-  settings: unknown,
+  request: any,
 ) => Promise<HTTPReturn> | HTTPReturn
 
 /** @type UseCaseRoute

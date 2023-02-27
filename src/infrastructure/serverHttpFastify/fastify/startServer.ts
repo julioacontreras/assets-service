@@ -33,6 +33,6 @@ export async function startServer(useCases: UseCaseMap): Promise<void> {
       logger.error(err.toString())
       process.exit(1)
     }
-    console.info(`Server listening at ${address}`)
+    logger.info(`Server listening at ${address}`)
   })
 }
