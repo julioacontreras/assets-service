@@ -1,6 +1,6 @@
-import { serverHTTP } from '@/adapters/serverHTTP'
-import { uploadCaseUse } from '@/application/useCases/upload'
-import { downloadCaseUse } from '@/application/useCases/download'
+import { serverHTTP } from '../adapters/serverHTTP'
+import { uploadCaseUse } from '../application/useCases/upload'
+import { downloadCaseUse } from '../application/useCases/download'
 
 function useRoutes() {
   serverHTTP.add('upload', {

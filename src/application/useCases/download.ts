@@ -1,8 +1,8 @@
-import fs from 'fs'
-import { HTTPReturn } from '@/adapters/serverHTTP/types'
-import { statusHTTP } from '@/adapters/serverHTTP'
-import { ERROR_INVALID_FILE_PATH_NAME } from '@/domain/constants'
-import { getSchemaRequest, prepareErrorParamsRequest } from '@/domain/shared/validateRequest'
+import * as fs from 'fs'
+import { HTTPReturn } from '../../adapters/serverHTTP/types'
+import { statusHTTP } from '../../adapters/serverHTTP'
+import { ERROR_INVALID_FILE_PATH_NAME } from '../../domain/constants'
+import { getSchemaRequest, prepareErrorParamsRequest } from '../../domain/shared/validateRequest'
 
 export type DownloadRequest = {
   params: {
@@ -30,6 +30,8 @@ export const downloadCaseUse = (request: DownloadRequest): HTTPReturn => {
       code: statusHTTP.INTERNAL_SERVER_ERROR,
     }
   }
+
+  console.log(request.params)
 
   const filenamepath = `./uploads/${request.params.area}/${request.params.file}`
   try {

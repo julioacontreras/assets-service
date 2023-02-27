@@ -8,7 +8,7 @@ import multer from 'fastify-multer'
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
-import { UseCaseRoute, UseCaseMap } from '@/adapters/serverHTTP/types'
+import { UseCaseRoute, UseCaseMap } from '../../../adapters/serverHTTP/types'
 
 export function createUseCases(useCases: UseCaseMap, server: FastifyInstance) {
   server.register(multer.contentParser)

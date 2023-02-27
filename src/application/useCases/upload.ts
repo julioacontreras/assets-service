@@ -1,12 +1,12 @@
 import { createWriteStream, existsSync, mkdirSync } from 'fs'
-import util from 'util'
+import * as util from 'util'
 import pipe from 'ts-stream'
 
-import { HTTPReturn } from '@/adapters/serverHTTP/types'
-import { statusHTTP } from '@/adapters/serverHTTP'
-import { ERROR_UPOADING_FILE } from '@/domain/constants'
+import { HTTPReturn } from '../../adapters/serverHTTP/types'
+import { statusHTTP } from '../../adapters/serverHTTP'
+import { ERROR_UPOADING_FILE } from '../../domain/constants'
 
-import { getSchemaRequest, prepareErrorParamsRequest } from '@/domain/shared/validateRequest'
+import { getSchemaRequest, prepareErrorParamsRequest } from '../../domain/shared/validateRequest'
 
 const pump = util.promisify(pipe)
 

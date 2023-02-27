@@ -1,4 +1,4 @@
-import { setLogger } from '@/adapters/logger'
+import { setLogger } from '../../adapters/logger'
 
 const logger = {
   info (message: string) {

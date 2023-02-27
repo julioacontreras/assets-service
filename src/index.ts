@@ -1,9 +1,9 @@
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 dotenv.config()
 
-import '@/infrastructure/logger'
-import '@/infrastructure/serverHttpFastify'
+import './infrastructure/logger'
+import './infrastructure/serverHttpFastify'
 
-import { startApp } from '@/application'
+import { startApp } from './application'
 
 startApp()

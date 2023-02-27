@@ -1,4 +1,4 @@
-import { UseCaseRoute } from "@/adapters/serverHTTP/types"
+import { UseCaseRoute } from "../../../../adapters/serverHTTP/types"
 import { RouteOptions } from "fastify"
 import {
     useUploadPreHandler,

@@ -1,4 +1,4 @@
-import { UseCaseFunction } from '@/adapters/serverHTTP/types'
+import { UseCaseFunction } from '../../../../adapters/serverHTTP/types'
 import multer from 'fastify-multer'
 const storage = multer.memoryStorage()
 

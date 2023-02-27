@@ -1,4 +1,4 @@
-import HttpStatus from 'http-status'
+import * as HttpStatus from 'http-status'
 export const statusHTTP = HttpStatus
 
 import { ServerHTTP } from './ServerHTTP'

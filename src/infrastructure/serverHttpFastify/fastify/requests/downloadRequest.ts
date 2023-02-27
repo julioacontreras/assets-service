@@ -1,4 +1,4 @@
-import { UseCaseFunction } from "@/adapters/serverHTTP/types"
+import { UseCaseFunction } from "../../../../adapters/serverHTTP/types"
 
 export function useDownloadHandler(useCaseExecute: UseCaseFunction, useCaseName: string) {
   async function downloadRoute (request: any, reply: any) {
