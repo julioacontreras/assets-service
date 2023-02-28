@@ -19,3 +19,5 @@ dist/
 *.sw?
 
 uploads/*
+
+.DS_Store
