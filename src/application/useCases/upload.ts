@@ -1,6 +1,4 @@
 import { createWriteStream, existsSync, mkdirSync } from 'fs'
-import * as util from 'util'
-import pipe from 'ts-stream'
 
 import { HTTPReturn } from '../../adapters/serverHTTP/types'
 import { statusHTTP } from '../../adapters/serverHTTP'
@@ -8,14 +6,12 @@ import { ERROR_UPOADING_FILE } from '../../domain/constants'
 
 import { getSchemaRequest, prepareErrorParamsRequest } from '../../domain/shared/validateRequest'
 
-const pump = util.promisify(pipe)
-
 export type MediaRequest = {
   params: {
     area: string
     file: string
   },
-  file: any
+  file: Buffer
 }
 
 export type MediaResponse = {
@@ -23,9 +19,9 @@ export type MediaResponse = {
   file: string
 }
 
-export const uploadThis = (pathName: string, fileName: string, file: any) => {
+export const uploadThis = (pathName: string, fileName: string, file: Buffer) => {
   const stream = createWriteStream(`${pathName}${fileName}`)
-  stream.once('open', function (fd) {
+  stream.once('open', function () {
     stream.write(file)
     stream.end()
   })

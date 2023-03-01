@@ -3,7 +3,7 @@ import { UseCaseMap } from '../../../adapters/serverHTTP/types'
 import { logger } from '../../../adapters/logger'
 import { createUseCases } from './createUseCases'
 
-export async function startServer(useCases: UseCaseMap): Promise<void> {
+export async function startServer (useCases: UseCaseMap): Promise<void> {
   const server = fastify({
     logger: true,
   })

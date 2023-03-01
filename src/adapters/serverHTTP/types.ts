@@ -9,7 +9,6 @@ export type AppError = {
 
 export type HTTPResponse = unknown
 
-
 export type HTTPReturn = {
   response: HTTPResponse
   session?: unknown
@@ -28,7 +27,7 @@ export type HTTPRequest = {
  *
  */
 export type UseCaseFunction = (
-  request: any,
+  request: any, // eslint-disable-line
 ) => Promise<HTTPReturn> | HTTPReturn
 
 /** @type UseCaseRoute

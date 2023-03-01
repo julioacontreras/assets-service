@@ -1,21 +1,23 @@
 import { setServerHTTP } from '../../adapters/serverHTTP'
+
 import {
   UseCaseMap,
   UseCaseRoute,
   UseCaseName,
 } from '../../adapters/serverHTTP/types'
+
 import { ServerHTTP } from '../../adapters/serverHTTP/ServerHTTP'
 
 import startServer from './fastify'
 
-function useServerHTTP(): ServerHTTP {
+function useServerHTTP (): ServerHTTP {
   const useCases: UseCaseMap = new Map<UseCaseName, UseCaseRoute>()
 
-  function add(useCaseName: UseCaseName, settings: UseCaseRoute) {
+  function add (useCaseName: UseCaseName, settings: UseCaseRoute): void {
     useCases.set(useCaseName, settings)
   }
 
-  function run() {
+  function run (): void {
     startServer(useCases)
   }
 

@@ -2,7 +2,7 @@ import { serverHTTP } from '../adapters/serverHTTP'
 import { uploadCaseUse } from '../application/useCases/upload'
 import { downloadCaseUse } from '../application/useCases/download'
 
-function useRoutes() {
+export function startApp () {
   serverHTTP.add('upload', {
     useCase: uploadCaseUse,
     route: '/api/media/:area/:file',
@@ -14,10 +14,6 @@ function useRoutes() {
     route: '/api/media/:area/:file',
     method: 'download',
   })
-}
-
-export function startApp() {
-  useRoutes()
 
   serverHTTP.run()
 }

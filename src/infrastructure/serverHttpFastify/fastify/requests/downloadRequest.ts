@@ -1,7 +1,7 @@
-import { UseCaseFunction } from "../../../../adapters/serverHTTP/types"
+import { UseCaseFunction } from '../../../../adapters/serverHTTP/types'
 
-export function useDownloadHandler(useCaseExecute: UseCaseFunction, useCaseName: string) {
-  async function downloadRoute (request: any, reply: any) {
+export function useDownloadHandler (useCaseExecute: UseCaseFunction, useCaseName: string) {
+  async function downloadRoute (request: any, reply: any) {  // eslint-disable-line
     if (!useCaseExecute) {
       return reply.status(500).send({ status: `Not exist use case ${useCaseName}` })
     }    

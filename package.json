@@ -17,21 +17,23 @@
   "license": "ISC",
   "devDependencies": {
     "@fastify/cookie": "^6.0.0",
+    "@fastify/cors": "^8.2.0",
+    "@fastify/formbody": "^7.4.0",
     "@types/body-parser": "^1.19.2",
     "@types/cors": "^2.8.12",
     "@types/fastify-multipart": "^0.7.0",
     "@types/jest": "^27.5.2",
     "@types/joi": "^17.2.3",
-    "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
-    "@fastify/cors": "^8.2.0",
-    "@fastify/formbody": "^7.4.0",
     "@types/node": "^18.14.2",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.35.0",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
     "ts-loader": "^9.2.8",
     "ts-stream": "^3.0.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "typescript-eslint": "0.0.1-alpha.0"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
