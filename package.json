@@ -4,13 +4,13 @@
   "description": "",
   "scripts": {
     "start": "node --use_strict dist",
-    "build": "rm -rf dist && tsc && npm run start",
+    "build": "rm -rf dist && tsc",
+    "build:dev": "npm run build && npm run start",
     "dev": "npx nodemon --config nodemon.json --quiet --exec \"npm run build\"",
     "lint": "eslint --ignore-path .gitignore ./src --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test:unit": "jest",
-    "doc:build": "apidoc -i src -o documentation",
-    "doc": "npx http-server ./documentation"
+    "doc:build": "apidoc-markdown -i src -o documentation/README.md "
   },
   "keywords": [],
   "author": "",

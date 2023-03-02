@@ -22,15 +22,14 @@ https://developer.paypal.com/braintree/docs/start/hello-server
 
 ## Documentation
 
+The documentation is avaliable in this [link](./documentation/README.md)
+
 ```console
     # install depedencies
-    npm install apidoc http-server -g
+    npm install apidoc-markdown -g
 
     # generate api documentation
     npm run doc:build
-
-    # view documentation
-    npm run doc
 ```
 
 ## Tests

@@ -23,12 +23,15 @@ export async function startServer (useCases: UseCaseMap): Promise<void> {
   // -------------------------
   //   start server
   // -------------------------
-  const port = process.env.PORT
+  const port = process.env.MEDIA_SERVICE_PORT
   if (!port) {
     throw 'Dont have port selected in server'
   }
 
-  await server.listen({ port: Number(port) }, (err, address) => {
+  await server.listen({ 
+    port: Number(port),
+    host: '0.0.0.0',
+  }, (err, address) => {
     if (err) {
       logger.error(err.toString())
       process.exit(1)

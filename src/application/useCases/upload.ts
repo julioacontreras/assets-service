@@ -38,7 +38,7 @@ const prepareDestinyPath = (area: string): string => {
  *
  * @apiParam {String} area Area when will the file to upload 
  * 
- * @apiForm {String} file File name with extension to download
+ * @apiParam {String} file File name with extension to download
  *
  * @apiSuccess {String} area Area the file to uploaded
  * @apiSuccess {String} fileName File name uploaded
