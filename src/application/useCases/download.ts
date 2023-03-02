@@ -31,8 +31,6 @@ export const downloadCaseUse = (request: DownloadRequest): HTTPReturn => {
     }
   }
 
-  console.log(request.params)
-
   const filenamepath = `./uploads/${request.params.area}/${request.params.file}`
   try {
     const buffer = fs.readFileSync(filenamepath)
