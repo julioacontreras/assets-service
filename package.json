@@ -10,12 +10,13 @@
     "lint": "eslint --ignore-path .gitignore ./src --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test:unit": "jest",
-    "doc:build": "apidoc-markdown -i src -o documentation/README.md "
+    "doc:build": "apidoc-markdown -i src -o documentation/README.md"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.4.4",
     "@fastify/cookie": "^6.0.0",
     "@fastify/cors": "^8.2.0",
     "@fastify/formbody": "^7.4.0",
@@ -28,12 +29,15 @@
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.35.0",
+    "husky": "^8.0.3",
     "jest": "^27.5.1",
+    "pre-push": "^0.1.4",
     "ts-jest": "^27.1.4",
     "ts-loader": "^9.2.8",
     "ts-stream": "^3.0.0",
     "typescript": "^4.9.5",
-    "typescript-eslint": "0.0.1-alpha.0"
+    "typescript-eslint": "0.0.1-alpha.0",
+    "validate-commit": "^3.4.0"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -45,5 +49,15 @@
     "npm": "^9.2.0",
     "stream": "0.0.2",
     "util": "^0.12.5"
+  },
+  "pre-push": [
+    "lint",
+    "test:unit",
+    "doc:build"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
