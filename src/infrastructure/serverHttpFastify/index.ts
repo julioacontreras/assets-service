@@ -6,7 +6,7 @@ import {
   UseCaseName,
 } from '../../adapters/serverHTTP/types'
 
-import { ServerHTTP } from '../../adapters/serverHTTP/ServerHTTP'
+import { ServerHTTP } from '../../adapters/serverHTTP/serverHTTP'
 
 import startServer from './fastify'
 

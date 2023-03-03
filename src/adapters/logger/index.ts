@@ -1,4 +1,4 @@
-import { Logger } from './types'
+import { Logger } from './logger'
 
 export let logger: Logger
 
