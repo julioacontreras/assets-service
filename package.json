@@ -11,8 +11,9 @@
     "lint:fix": "npm run lint -- --fix",
     "test:unit": "jest",
     "doc:build": "apidoc-markdown -i src -o documentation/README.md",
-    "prepare": "husky install",
-    "commitmsg": "validate-commit-msg"
+    "prepare": "husky install ",
+    "pre:commit": "validate-commit-msg",
+    "pre:push": "npm run lint && npm run test:unit && npm run doc:build"
   },
   "keywords": [],
   "author": "",
