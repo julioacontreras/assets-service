@@ -1,4 +1,3 @@
-import * as fs from 'fs'
 import { HTTPReturn } from '../adapters/serverHTTP/types'
 import { statusHTTP } from '../adapters/serverHTTP'
 
