@@ -1,6 +1,6 @@
 import * as Joi from 'joi'
 import { ValidationError } from 'joi'
-import { ERROR_INVALID_PARAMS } from '../constants'
+import { ERROR_INVALID_PARAMS } from './constants'
 
 export const getSchemaRequest = () => {
   return Joi.object({

@@ -1,8 +1,8 @@
 import * as fs from 'fs'
-import { HTTPReturn } from '../../adapters/serverHTTP/types'
-import { statusHTTP } from '../../adapters/serverHTTP'
-import { ERROR_INVALID_FILE_PATH_NAME } from '../../domain/constants'
-import { getSchemaRequest, prepareErrorParamsRequest } from '../../domain/shared/validateRequest'
+import { HTTPReturn } from '../../../adapters/serverHTTP/types'
+import { statusHTTP } from '../../../adapters/serverHTTP'
+import { ERROR_INVALID_FILE_PATH_NAME } from '../../../domain/shared/constants'
+import { getSchemaRequest, prepareErrorParamsRequest } from '../../../domain/shared/validateRequest'
 
 export type DownloadRequest = {
   params: {
@@ -12,7 +12,7 @@ export type DownloadRequest = {
 }
 
 /**
- * @api {get} /api/media/:area/:file Download file
+ * @api {get} /api/v1/media/:area/:file Download file
  * @apiName Download
  * @apiGroup Media
  *

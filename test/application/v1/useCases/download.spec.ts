@@ -1,8 +1,8 @@
 import * as fs from 'fs'
 
-import { AppError } from '../../../src/adapters/serverHTTP/types'
-import { ERROR_INVALID_FILE_PATH_NAME } from '../../../src/domain/constants'
-import { downloadCaseUse } from '../../../src/application/useCases/download'
+import { AppError } from '../../../../src/adapters/serverHTTP/types'
+import { ERROR_INVALID_FILE_PATH_NAME } from '../../../../src/domain/shared/constants'
+import { downloadCaseUse } from '../../../../src/application/v1/useCases/download'
 
 jest.mock('fs', () => {
   return {

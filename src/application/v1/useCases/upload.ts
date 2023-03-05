@@ -1,10 +1,10 @@
 import { createWriteStream, existsSync, mkdirSync } from 'fs'
 
-import { HTTPReturn } from '../../adapters/serverHTTP/types'
-import { statusHTTP } from '../../adapters/serverHTTP'
-import { ERROR_UPOADING_FILE } from '../../domain/constants'
+import { HTTPReturn } from '../../../adapters/serverHTTP/types'
+import { statusHTTP } from '../../../adapters/serverHTTP'
+import { ERROR_UPOADING_FILE } from '../../../domain/shared/constants'
 
-import { getSchemaRequest, prepareErrorParamsRequest } from '../../domain/shared/validateRequest'
+import { getSchemaRequest, prepareErrorParamsRequest } from '../../../domain/shared/validateRequest'
 
 export type MediaRequest = {
   params: {
@@ -32,7 +32,7 @@ const prepareDestinyPath = (area: string): string => {
 }
 
 /**
- * @api {post} /api/media/:area/:file Upload file
+ * @api {post} /api/v1/media/:area/:file Upload file
  * @apiName Upload
  * @apiGroup Media 
  *

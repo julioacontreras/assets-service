@@ -2,18 +2,49 @@ import fastify from 'fastify'
 import { UseCaseMap } from '../../../adapters/serverHTTP/types'
 import { logger } from '../../../adapters/logger'
 import { createUseCases } from './createUseCases'
+import helmet from '@fastify/helmet'
+import multer from 'fastify-multer'
 
 export async function startServer (useCases: UseCaseMap): Promise<void> {
   const server = fastify({
     logger: true,
   })
 
+  const env = process.env.NODE_ENV || 'production' 
+  logger.info(env)
+
   // -------------------------
   //   set CORS
   // -------------------------
-  if (process.env.NODE_ENV === 'development') {
-    server.register(import('@fastify/cors'))
+  if (env === 'development') {
+    await server.register(import('@fastify/cors'))
   }
+
+  if (env === 'production') {
+    // -------------------------
+    //   set Security
+    // -------------------------
+    await server.register(
+      helmet,
+      // Example disables the `contentSecurityPolicy` middleware but keeps the rest.
+      { contentSecurityPolicy: false }      
+    )
+
+    // -------------------------
+    //   set compression hook
+    // -------------------------
+    await server.register(
+      import('@fastify/compress'),
+      { global: false }
+    )    
+  }
+
+
+  // -------------------------
+  //   to make uploads
+  // -------------------------
+  server.register(multer.contentParser)
+
 
   // -------------------------
   //   add use cases from application

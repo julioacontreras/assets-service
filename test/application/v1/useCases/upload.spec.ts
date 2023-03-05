@@ -2,10 +2,10 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as util from 'util'
 
-import { AppError } from '../../../src/adapters/serverHTTP/types'
-import { ERROR_UPOADING_FILE } from '../../../src/domain/constants'
-import { uploadCaseUse } from '../../../src/application/useCases/upload'
-import * as upload from '../../../src/application/useCases/upload'
+import { AppError } from '../../../../src/adapters/serverHTTP/types'
+import { ERROR_UPOADING_FILE } from '../../../../src/domain/shared/constants'
+import { uploadCaseUse } from '../../../../src/application/v1/useCases/upload'
+import * as upload from '../../../../src/application/v1/useCases/upload'
 
 jest.mock('fs', () => {
   return {
