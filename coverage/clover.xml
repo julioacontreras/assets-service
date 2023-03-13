@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678026675315" clover="3.2.0">
-  <project timestamp="1678026675315" name="All files">
-    <metrics statements="161" coveredstatements="50" conditionals="21" coveredconditionals="1" methods="30" coveredmethods="7" elements="212" coveredelements="58" complexity="0" loc="161" ncloc="161" packages="11" files="18" classes="18"/>
+<coverage generated="1678037267915" clover="3.2.0">
+  <project timestamp="1678037267915" name="All files">
+    <metrics statements="161" coveredstatements="50" conditionals="21" coveredconditionals="1" methods="30" coveredmethods="7" elements="212" coveredelements="58" complexity="0" loc="161" ncloc="161" packages="10" files="18" classes="18"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/index.ts">
@@ -36,9 +36,9 @@
       <metrics statements="12" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="health.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/health.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/index.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -101,17 +101,14 @@
         <line num="74" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.domain">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="constants.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/constants.ts">
+    <package name="src.domain.shared">
+      <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="constants.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/shared/constants.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
       </file>
-    </package>
-    <package name="src.domain.shared">
-      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="validateRequest.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/shared/validateRequest.ts">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>

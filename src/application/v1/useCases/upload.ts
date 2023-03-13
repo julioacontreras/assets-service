@@ -1,10 +1,9 @@
-import { createWriteStream, existsSync, mkdirSync } from 'fs'
-
 import { HTTPReturn } from '../../../adapters/serverHTTP/types'
 import { statusHTTP } from '../../../adapters/serverHTTP'
-import { ERROR_UPOADING_FILE } from '../../../domain/shared/constants'
 
+import { ERROR_UPOADING_FILE } from '../../../domain/shared/constants'
 import { getSchemaRequest, prepareErrorParamsRequest } from '../../../domain/shared/validateRequest'
+import { upload } from '../../../domain/upload'
 
 export type MediaRequest = {
   params: {
@@ -12,23 +11,6 @@ export type MediaRequest = {
     file: string
   },
   file: Buffer
-}
-
-export type MediaResponse = {
-  area: string
-  file: string
-}
-
-export const uploadThis = (pathName: string, fileName: string, file: Buffer) => {
-  const stream = createWriteStream(`${pathName}${fileName}`)
-  stream.once('open', function () {
-    stream.write(file)
-    stream.end()
-  })
-}
-
-const prepareDestinyPath = (area: string): string => { 
-  return `./uploads/${area}/`
 }
 
 /**
@@ -43,7 +25,7 @@ const prepareDestinyPath = (area: string): string => {
  * @apiSuccess {String} area Area the file to uploaded
  * @apiSuccess {String} fileName File name uploaded
  */
-export const uploadCaseUse = (request: MediaRequest): HTTPReturn => {
+export const uploadCaseUse = async (request: MediaRequest): Promise<HTTPReturn> => {
   const schema = getSchemaRequest()
   const { error } = schema.validate(request.params)
   if (error){
@@ -52,22 +34,11 @@ export const uploadCaseUse = (request: MediaRequest): HTTPReturn => {
       code: statusHTTP.INTERNAL_SERVER_ERROR,
     }
   }
-
-  const area = request.params.area as string
-  const fileName = request.params.file
-  const pathName = prepareDestinyPath(area) 
-
-  if (!existsSync(pathName)) {
-    mkdirSync(pathName, { recursive: true })
-  }
-
+  
   try {
-    uploadThis(pathName, fileName, request.file)
+    const response = await upload(request.params.area, request.params.file, request.file)
     return {
-      response: {
-        file: fileName,
-        area 
-      },
+      response,
       code: statusHTTP.OK,
     }
   } catch(err) {

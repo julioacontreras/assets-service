@@ -9,6 +9,10 @@ dist/
 
 .env
 
+# face-api
+face-api/node_modules/
+face-api/dist/
+
 # Editor directories and files
 .idea
 .vscode
@@ -21,3 +25,4 @@ dist/
 uploads/*
 
 .DS_Store
+__pycache__
