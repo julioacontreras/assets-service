@@ -1,11 +1,25 @@
 import * as fs from 'fs'
-import * as path from 'path'
 import * as util from 'util'
 
 import { AppError } from '../../../../src/adapters/serverHTTP/types'
 import { ERROR_UPOADING_FILE } from '../../../../src/domain/shared/constants'
 import { uploadCaseUse } from '../../../../src/application/v1/useCases/upload'
-import * as upload from '../../../../src/application/v1/useCases/upload'
+
+import * as moduleCreatePath from '../../../../src/domain/upload/events/createPath'
+import * as moduleStorageFile from '../../../../src/domain/upload/events/storageFile'
+import * as moduleGetFileName from '../../../../src/domain/upload/events/getFileName'
+import * as moduleGetFileExtension from '../../../../src/domain/upload/events/getFileExtension'
+
+import { UploadResult } from 'src/domain/upload'
+import { Image } from '../../../../src/infrastructure/image'
+
+jest.mock('axios', () => {
+  return {
+    __esModule: true
+  }
+})
+
+jest.mock('sharp')
 
 jest.mock('fs', () => {
   return {
@@ -17,7 +31,15 @@ jest.mock('fs', () => {
 jest.mock('path', () => {
   return {
     __esModule: true,
-    ...jest.requireActual('path'),
+    extname (v: string) {
+      return v
+    },
+    join (v: string) {
+      return v
+    },
+    basename (v: string) {
+      return v
+    }
   }
 })
 
@@ -28,32 +50,52 @@ jest.mock('util', () => {
   }
 })
 
-const uploadThisSpy = jest.spyOn(upload, 'uploadThis')
+const getFileExtensionSpy = jest.spyOn(moduleGetFileExtension, 'getFileExtension')
+const getFileNameSpy = jest.spyOn(moduleGetFileName, 'getFileName')
+const createPathSpy = jest.spyOn(moduleCreatePath, 'createPath')
+const storageFileSpy = jest.spyOn(moduleStorageFile, 'storageFile')
 const existsSyncSpy = jest.spyOn(fs, 'existsSync')
 const mkdirSyncSpy = jest.spyOn(fs, 'mkdirSync')
-const basenameSpy = jest.spyOn(path, 'basename')
 const promisifySpy = jest.spyOn(util, 'promisify')
+
+const faceInfoSpy = jest.spyOn(Image.prototype, 'faceInfo')
+const resizeSpy = jest.spyOn(Image.prototype, 'resize')
 
 describe('test upload', () => {
   beforeEach(() => {
-    uploadThisSpy.mockReset()
-    uploadThisSpy.mockClear()
+    createPathSpy.mockReset()
+    createPathSpy.mockClear()
+    storageFileSpy.mockReset()
+    storageFileSpy.mockClear()
     existsSyncSpy.mockReset()
     existsSyncSpy.mockClear()
     mkdirSyncSpy.mockReset()
     mkdirSyncSpy.mockClear()
-    basenameSpy.mockReset()
-    basenameSpy.mockClear()
     promisifySpy.mockReset()
     promisifySpy.mockClear()
-    basenameSpy.mockReturnValue('')
     existsSyncSpy.mockReturnValue(false)
     mkdirSyncSpy.mockImplementation(() => '')
+    faceInfoSpy.mockReset()
+    faceInfoSpy.mockClear()
+    faceInfoSpy.mockResolvedValue({
+      faceCount: 0
+    })
+    resizeSpy.mockReset()
+    resizeSpy.mockClear()
+    resizeSpy.mockResolvedValue(Buffer.alloc(1))
+    getFileNameSpy.mockReset()
+    getFileNameSpy.mockClear()
+    getFileNameSpy.mockReturnValue('')
+    getFileExtensionSpy.mockReset()
+    getFileExtensionSpy.mockClear()
+    getFileExtensionSpy.mockReturnValue('')    
   })
 
   test('Shold be result success', async () => {
-    uploadThisSpy.mockReturnValue()
-    const result = uploadCaseUse({
+    createPathSpy.mockReturnValue('')
+    storageFileSpy.mockResolvedValue(Buffer.alloc(1))
+
+    const result = await uploadCaseUse({
       params: {
         area: 'user-1',
         file: 'image.jpg',
@@ -61,8 +103,8 @@ describe('test upload', () => {
       file: Buffer.alloc(10),
     })
 
-    const response = result.response as upload.MediaResponse
-
+    const response = result.response as UploadResult
+    console.log(response)
     expect(result).toHaveProperty('response')
     expect(result).toHaveProperty('code')
     expect(response.area).toEqual('user-1')
@@ -70,11 +112,12 @@ describe('test upload', () => {
     expect(result.code).toEqual(200)
   })
 
-  test('Shold be error tring upload', () => {
-    uploadThisSpy.mockImplementation(() => {
+  test('Shold be error tring upload', async () => {
+    createPathSpy.mockReturnValue('')
+    storageFileSpy.mockImplementation(() => {
       throw new Error('some error')
     })
-    const result = uploadCaseUse({
+    const result = await uploadCaseUse({
       params: {
         area: 'user-1',
         file: 'image.jpg',

@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678037267915" clover="3.2.0">
-  <project timestamp="1678037267915" name="All files">
-    <metrics statements="161" coveredstatements="50" conditionals="21" coveredconditionals="1" methods="30" coveredmethods="7" elements="212" coveredelements="58" complexity="0" loc="161" ncloc="161" packages="10" files="18" classes="18"/>
+<coverage generated="1678710650609" clover="3.2.0">
+  <project timestamp="1678710650609" name="All files">
+    <metrics statements="230" coveredstatements="99" conditionals="25" coveredconditionals="0" methods="48" coveredmethods="16" elements="303" coveredelements="115" complexity="0" loc="230" ncloc="230" packages="14" files="29" classes="29"/>
     <package name="src">
-      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/index.ts">
-        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.adapters.image">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/adapters/image/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.adapters.logger">
@@ -54,7 +63,7 @@
       </file>
     </package>
     <package name="src.application.v1.useCases">
-      <metrics statements="39" coveredstatements="33" conditionals="3" coveredconditionals="1" methods="5" coveredmethods="3"/>
+      <metrics statements="27" coveredstatements="25" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="download.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/v1/useCases/download.ts">
         <metrics statements="14" coveredstatements="13" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -73,32 +82,20 @@
         <line num="42" count="1" type="stmt"/>
       </file>
       <file name="upload.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/v1/useCases/upload.ts">
-        <metrics statements="25" coveredstatements="20" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
+        <metrics statements="13" coveredstatements="12" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="49" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="56" count="2" type="stmt"/>
-        <line num="57" count="2" type="stmt"/>
-        <line num="58" count="2" type="stmt"/>
-        <line num="60" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="61" count="2" type="stmt"/>
-        <line num="64" count="2" type="stmt"/>
-        <line num="65" count="2" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.domain.shared">
@@ -117,6 +114,123 @@
         <line num="6" count="4" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.domain.upload">
+      <metrics statements="44" coveredstatements="41" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8"/>
+      <file name="createImageDetails.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createImageDetails.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="createImageResized.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createImageResized.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+      </file>
+      <file name="createImageWithoutBackground.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createImageWithoutBackground.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+      <file name="createOriginalImage.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createOriginalImage.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/index.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.domain.upload.events">
+      <metrics statements="22" coveredstatements="9" conditionals="1" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="createPath.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/createPath.ts">
+        <metrics statements="8" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="getFileExtension.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/getFileExtension.ts">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="getFileName.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/getFileName.ts">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="storageFile.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/storageFile.ts">
+        <metrics statements="8" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.infrastructure.image">
+      <metrics statements="12" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/image/index.ts">
+        <metrics statements="12" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.infrastructure.logger">

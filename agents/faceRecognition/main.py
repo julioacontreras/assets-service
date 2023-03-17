@@ -3,7 +3,43 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.post("/")
+@app.post("/remove-bg")
+def removeBg():
+    body = request.json
+    imagePath = body["src"]
+    
+    # Read the image
+    src = cv2.imread(imagePath, 1)
+    
+    hh, ww = src.shape[:2]
+
+    # threshold on white
+    # Define lower and uppper limits
+    #lower = src.array([200, 200, 200])
+    #upper = src.array([255, 255, 255])
+
+    # Create mask to only select black
+    #tmp = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
+    #_,alpha = cv2.threshold(tmp,0,255,cv2.THRESH_BINARY)
+
+    # apply morphology
+    #kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (20,20))
+    #morph = cv2.morphologyEx(alpha, cv2.MORPH_CLOSE, kernel)
+
+    # invert morp image
+    #mask = 255 - morph
+
+    # apply mask to image
+    #result = cv2.bitwise_and(src, src, mask=mask)
+
+    # save results
+    #cv2.imwrite('photo_lower.jpg', lower)
+    #cv2.imwrite('pills_morph.jpg', morph)
+    #cv2.imwrite('pills_mask.jpg', mask)
+    #cv2.imwrite('pills_result.jpg', result)
+    return {}
+
+@app.post("/face-recognition")
 def findFaces():
     body = request.json
     print(body["src"])
