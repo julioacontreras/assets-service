@@ -13,12 +13,6 @@ import * as moduleGetFileExtension from '../../../../src/domain/upload/events/ge
 import { UploadResult } from 'src/domain/upload'
 import { Image } from '../../../../src/infrastructure/image'
 
-jest.mock('axios', () => {
-  return {
-    __esModule: true
-  }
-})
-
 jest.mock('sharp')
 
 jest.mock('fs', () => {
@@ -58,7 +52,6 @@ const existsSyncSpy = jest.spyOn(fs, 'existsSync')
 const mkdirSyncSpy = jest.spyOn(fs, 'mkdirSync')
 const promisifySpy = jest.spyOn(util, 'promisify')
 
-const faceInfoSpy = jest.spyOn(Image.prototype, 'faceInfo')
 const resizeSpy = jest.spyOn(Image.prototype, 'resize')
 
 describe('test upload', () => {
@@ -75,11 +68,6 @@ describe('test upload', () => {
     promisifySpy.mockClear()
     existsSyncSpy.mockReturnValue(false)
     mkdirSyncSpy.mockImplementation(() => '')
-    faceInfoSpy.mockReset()
-    faceInfoSpy.mockClear()
-    faceInfoSpy.mockResolvedValue({
-      faceCount: 0
-    })
     resizeSpy.mockReset()
     resizeSpy.mockClear()
     resizeSpy.mockResolvedValue(Buffer.alloc(1))
@@ -104,7 +92,6 @@ describe('test upload', () => {
     })
 
     const response = result.response as UploadResult
-    console.log(response)
     expect(result).toHaveProperty('response')
     expect(result).toHaveProperty('code')
     expect(response.area).toEqual('user-1')

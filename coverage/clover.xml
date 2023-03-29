@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679086690472" clover="3.2.0">
-  <project timestamp="1679086690472" name="All files">
-    <metrics statements="226" coveredstatements="98" conditionals="21" coveredconditionals="0" methods="48" coveredmethods="16" elements="295" coveredelements="114" complexity="0" loc="226" ncloc="226" packages="14" files="29" classes="29"/>
+<coverage generated="1680075397777" clover="3.2.0">
+  <project timestamp="1680075397777" name="All files">
+    <metrics statements="208" coveredstatements="82" conditionals="21" coveredconditionals="0" methods="44" coveredmethods="14" elements="273" coveredelements="96" complexity="0" loc="208" ncloc="208" packages="14" files="28" classes="28"/>
     <package name="src">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/index.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -17,7 +17,7 @@
     </package>
     <package name="src.adapters.image">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/adapters/image/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/adapters/image/index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -25,7 +25,7 @@
     </package>
     <package name="src.adapters.logger">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/adapters/logger/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/adapters/logger/index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -33,7 +33,7 @@
     </package>
     <package name="src.adapters.serverHTTP">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/adapters/serverHTTP/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/adapters/serverHTTP/index.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -43,13 +43,13 @@
     </package>
     <package name="src.application">
       <metrics statements="12" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="health.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/health.ts">
+      <file name="health.ts" path="/Users/julio/julio/demo/media-service/src/application/health.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
       </file>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/application/index.ts">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -64,7 +64,7 @@
     </package>
     <package name="src.application.v1.useCases">
       <metrics statements="27" coveredstatements="25" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="download.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/v1/useCases/download.ts">
+      <file name="download.ts" path="/Users/julio/julio/demo/media-service/src/application/v1/useCases/download.ts">
         <metrics statements="14" coveredstatements="13" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -81,7 +81,7 @@
         <line num="37" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
       </file>
-      <file name="upload.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/application/v1/useCases/upload.ts">
+      <file name="upload.ts" path="/Users/julio/julio/demo/media-service/src/application/v1/useCases/upload.ts">
         <metrics statements="13" coveredstatements="12" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -100,13 +100,13 @@
     </package>
     <package name="src.domain.shared">
       <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="constants.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/shared/constants.ts">
+      <file name="constants.ts" path="/Users/julio/julio/demo/media-service/src/domain/shared/constants.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
       </file>
-      <file name="validateRequest.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/shared/validateRequest.ts">
+      <file name="validateRequest.ts" path="/Users/julio/julio/demo/media-service/src/domain/shared/validateRequest.ts">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -117,15 +117,9 @@
       </file>
     </package>
     <package name="src.domain.upload">
-      <metrics statements="44" coveredstatements="41" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8"/>
-      <file name="createImageDetails.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createImageDetails.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-      </file>
-      <file name="createImageResized.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createImageResized.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="28" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6"/>
+      <file name="createImageResized.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/createImageResized.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -137,20 +131,14 @@
         <line num="10" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
       </file>
-      <file name="createImageWithoutBackground.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createImageWithoutBackground.ts">
+      <file name="createImageWithoutBackground.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/createImageWithoutBackground.ts">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
       </file>
-      <file name="createOriginalImage.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/createOriginalImage.ts">
+      <file name="createOriginalImage.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/createOriginalImage.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -160,27 +148,20 @@
         <line num="10" count="2" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
       </file>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/index.ts">
-        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/index.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.domain.upload.events">
       <metrics statements="22" coveredstatements="9" conditionals="1" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="createPath.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/createPath.ts">
+      <file name="createPath.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/events/createPath.ts">
         <metrics statements="8" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -191,19 +172,19 @@
         <line num="11" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
-      <file name="getFileExtension.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/getFileExtension.ts">
+      <file name="getFileExtension.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/events/getFileExtension.ts">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
-      <file name="getFileName.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/getFileName.ts">
+      <file name="getFileName.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/events/getFileName.ts">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
-      <file name="storageFile.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/domain/upload/events/storageFile.ts">
+      <file name="storageFile.ts" path="/Users/julio/julio/demo/media-service/src/domain/upload/events/storageFile.ts">
         <metrics statements="8" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -216,22 +197,20 @@
       </file>
     </package>
     <package name="src.infrastructure.image">
-      <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/image/index.ts">
-        <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/image/index.ts">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.infrastructure.logger">
       <metrics statements="9" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/logger/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/logger/index.ts">
         <metrics statements="9" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -246,7 +225,7 @@
     </package>
     <package name="src.infrastructure.serverHttpFastify">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/index.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -259,7 +238,7 @@
     </package>
     <package name="src.infrastructure.serverHttpFastify.fastify">
       <metrics statements="32" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="createUseCases.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/createUseCases.ts">
+      <file name="createUseCases.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/createUseCases.ts">
         <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -268,12 +247,12 @@
         <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="13" count="0" type="stmt"/>
       </file>
-      <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/index.ts">
+      <file name="index.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/index.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
-      <file name="startServer.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/startServer.ts">
+      <file name="startServer.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/startServer.ts">
         <metrics statements="24" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -303,7 +282,7 @@
     </package>
     <package name="src.infrastructure.serverHttpFastify.fastify.requests">
       <metrics statements="41" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="8" coveredmethods="0"/>
-      <file name="downloadRequest.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/requests/downloadRequest.ts">
+      <file name="downloadRequest.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/requests/downloadRequest.ts">
         <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -314,7 +293,7 @@
         <line num="15" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
-      <file name="factoryRequest.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/requests/factoryRequest.ts">
+      <file name="factoryRequest.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/requests/factoryRequest.ts">
         <metrics statements="11" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -328,7 +307,7 @@
         <line num="26" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
       </file>
-      <file name="getRequest.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/requests/getRequest.ts">
+      <file name="getRequest.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/requests/getRequest.ts">
         <metrics statements="8" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -339,7 +318,7 @@
         <line num="15" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
-      <file name="uploadRequest.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/serverHttpFastify/fastify/requests/uploadRequest.ts">
+      <file name="uploadRequest.ts" path="/Users/julio/julio/demo/media-service/src/infrastructure/serverHttpFastify/fastify/requests/uploadRequest.ts">
         <metrics statements="14" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
