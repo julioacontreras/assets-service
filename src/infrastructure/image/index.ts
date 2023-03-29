@@ -1,6 +1,6 @@
 import sharp from 'sharp'
 // import Jimp from 'jimp'
-import axios from 'axios'
+// import axios from 'axios'
 
 import { FaceInfo, ResizeOptions } from 'src/adapters/image/image'
 import { setImage } from '../../adapters/image'

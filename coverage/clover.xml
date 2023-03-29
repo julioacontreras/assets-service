@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678710650609" clover="3.2.0">
-  <project timestamp="1678710650609" name="All files">
-    <metrics statements="230" coveredstatements="99" conditionals="25" coveredconditionals="0" methods="48" coveredmethods="16" elements="303" coveredelements="115" complexity="0" loc="230" ncloc="230" packages="14" files="29" classes="29"/>
+<coverage generated="1679086690472" clover="3.2.0">
+  <project timestamp="1679086690472" name="All files">
+    <metrics statements="226" coveredstatements="98" conditionals="21" coveredconditionals="0" methods="48" coveredmethods="16" elements="295" coveredelements="114" complexity="0" loc="226" ncloc="226" packages="14" files="29" classes="29"/>
     <package name="src">
       <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/index.ts">
@@ -216,21 +216,17 @@
       </file>
     </package>
     <package name="src.infrastructure.image">
-      <metrics statements="12" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="index.ts" path="/Users/jaaranis/julio/projects/demo/vip-media-service/src/infrastructure/image/index.ts">
-        <metrics statements="12" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.infrastructure.logger">
